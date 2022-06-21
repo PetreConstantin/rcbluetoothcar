@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_200">#6F9CEB</color>
+    <color name="blue_green_500">#306BAC</color>
+    <color name="space_cadet">#141B41</color>
+    <color name="baby_blue">#98B9F2</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_crimson">#8C1C13</color>
+    <color name="red_chestnut">#BF4342</color>
+</resources>

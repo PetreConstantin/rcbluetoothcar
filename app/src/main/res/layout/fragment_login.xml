@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context = "com.example.bluetoothrccar.ui.auth.login.LoginFragment">
+
+    <data>
+        <variable
+            name="myloginViewModel"
+            type="com.example.bluetoothrccar.ui.auth.login.LoginViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E2E2E2">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="687dp"
+            android:padding="16dp"
+            app:layout_anchor="@+id/progress_bar"
+            app:layout_anchorGravity="top|center">
+            android:layout_marginTop="75dp"
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:padding="18dp"
+            app:layout_anchor="@+id/progress_bar"
+            app:layout_anchorGravity="center">
+
+            <EditText
+                android:text="@={myloginViewModel.inputUsername}"
+                android:id="@+id/edit_text_username_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_round_gray_background"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="16dp"
+                android:hint="username"
+                android:inputType="textPersonName"
+                android:padding="12dp" />
+
+            <EditText
+                android:text="@={myloginViewModel.inputPassword}"
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_round_gray_background"
+                android:drawableLeft="@drawable/ic_lock"
+                android:drawablePadding="16dp"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+
+            <Button
+                android:onClick="@{()->myloginViewModel.loginButton()}"
+                android:id="@+id/submitButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sign In"
+                android:textAllCaps="false" />
+
+            <Button
+                android:onClick="@{()->myloginViewModel.singUp()}"
+                android:id="@+id/button_sign_up"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Register"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_anchor="@+id/linearLayout2"
+            app:layout_anchorGravity="top|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Bluetooth RC Car"
+                android:textSize="@dimen/text_size_large"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#465A61"
+                app:fontFamily="cursive" />
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
